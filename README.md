@@ -4,4 +4,4 @@ if(sperm === 'XY'){
   }else(sperm === 'XX')
   return "Congratulations! You're going to have a daughter."
 }
-console.log (chromosomeCheck('XX'));
+console.log (chromosomeCheck('XX')); 
