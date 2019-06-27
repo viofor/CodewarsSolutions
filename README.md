@@ -1,3 +1,3 @@
-function greet(name){
-  return "Hello" + ", " + name +  " how are you doing today?"
+function opposite(number) {
+  return - number;
 }
