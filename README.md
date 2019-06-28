@@ -1,8 +1,4 @@
-function sumR(x){
-  if(x.length === 0){
-   return 0;
-  }else {
-  return  x.shift() + sumR(x);
-  }
-}
+function switchItUp(number){
+ let arr = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+  return arr[number];
   
