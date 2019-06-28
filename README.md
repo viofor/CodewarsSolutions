@@ -1,8 +1,8 @@
-function reverseList(list) {
-  let newList = [];
-  for(let i = list.length -1 ; i >= 0; i--){
-     newList.push(list[i])
-  }
-  return newList;
+var countSheep = function (num){
+ let newString = '';
+   for(let i = 1; i <= num; i++){
+     newString = newString  + i + ' sheep...';
+   } 
+   return newString;
 }
- 
+  
