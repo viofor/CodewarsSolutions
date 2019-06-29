@@ -13,3 +13,6 @@ let red = 0;
   
   new test
   new
+  
+  
+  check master
