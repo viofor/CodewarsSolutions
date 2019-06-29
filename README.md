@@ -12,3 +12,4 @@ let red = 0;
   
   
   new test
+  new
