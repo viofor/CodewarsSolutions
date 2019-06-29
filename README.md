@@ -1,11 +1,10 @@
-function calcType(a, b, res) {
-if(a + b === res)
- return "addition"
-  if(a - b === res)
-  return "subtraction"
-   if(a * b === res)
-   return "multiplication"
-    if(a / b === res)
-     return "division"
+function reverseNumber(n) {
+  if( n >= 0){
+  let arr = n.toString().split('').reverse();
+  return +(arr.join(''));
+  }else{
+  n = n * (-1);
+  let arr = n.toString().split('').reverse();
+  return (-1) * (+(arr.join('')));
+  }
 }
-  
