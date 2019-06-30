@@ -1,19 +1,6 @@
-function countRedBeads(n) {
-let red = 0;
-  if(n < 2){
-  return 0;
+function simpleMultiplication(n){
+  if(n % 2) {
+   return n * 9;
+   }else
+  return n * 8;
   }
-    return (n - 1) * 2
-  }
-  
-  
-  
-  new solution
-  
-  
-  new test
-  new
-  
-  
-  check master
-  
