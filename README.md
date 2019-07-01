@@ -24,3 +24,13 @@ let red = 0;
     const center = (w > 1) ? ('*' + ' '.repeat(w - 2) + '*' + rn).repeat(h - 2) : '';
     return  h > 1 ? (tb + center + tb) : tb.repeat(h);
   }
+  
+  
+  
+  const reverseSeq = n => {
+    const arr = [];
+     for(let i = n; i > 0; i--){
+       arr.push(i);
+     }
+     return arr;
+  };
