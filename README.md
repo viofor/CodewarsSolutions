@@ -34,3 +34,10 @@ let red = 0;
      }
      return arr;
   };
+  
+  
+  
+  
+  function getAverage(marks){
+      return Math.floor(marks.reduce((acc, cur)=> acc + cur) / marks.length);
+    }
