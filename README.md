@@ -1,14 +1,10 @@
-function isPangram(string){
-  let abc = "abcdefghijklmnopqrstuvwxyz";
-   let arr = string.split('');
-   for(let i = 0; i < arr.length; i++){
-    let elem = arr[i].toLowerCase()
-     abc = abc.replace(elem,"")
-     }
-     if(abc.length === 0){
-     return true
-     } else {
-     return false
-    }
-};
+function bonusTime(salary, bonus) {
+  return bonus ? "£" + salary * 10  :   "£" + salary;
   
+  function greet(name){
+    return `Hello, ${name} how are you doing today?`;  
+   }
+   
+   function solution(str, ending){
+     return  (str.slice(str.length -  ending.length) === ending);
+   }
