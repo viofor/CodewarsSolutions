@@ -1,10 +1,9 @@
-function bonusTime(salary, bonus) {
-  return bonus ? "£" + salary * 10  :   "£" + salary;
-  
-  function greet(name){
-    return `Hello, ${name} how are you doing today?`;  
+function spongeMeme(sentence){
+let str = '';
+  for(let i = 0; i < sentence.length; i++){
+   if(i % 2 == 0){str += sentence[i].toUpperCase();
+    }else{ str += sentence[i].toLowerCase(); 
+    }
    }
-   
-   function solution(str, ending){
-     return  (str.slice(str.length -  ending.length) === ending);
-   }
+    return str
+  };
