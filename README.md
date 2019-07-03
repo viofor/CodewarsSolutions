@@ -1,12 +1,14 @@
-function randomCase(x){
-let str = '';
-  for(let i = 0; i < x.length; i++){
-   if(Math.round(Math.random()) > 0){
-   str += x[i].toUpperCase();
-   }
-   else{
-   str += x[i].toLowerCase();
+function solve(arr){
+ let alp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+ let nArr = [];
+ for(let i = 0; i < arr.length; i++){
+   let count = 0
+   for(let j = 0; j < arr[i].length; j++){
+    if( j === alp.indexOf(arr[i][j].toUpperCase())){
+      count++
+     }
     }
-   }
-   return str
-}; 
+   nArr.push(count)
+  }
+return nArr
+};
