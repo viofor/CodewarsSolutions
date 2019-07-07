@@ -23,3 +23,16 @@ function going(n) {
    }
    return Math.floor(res * 1e6) / 1e6;
 };
+
+let palindromeChainLength = n => {
+
+    let reverNum = n => Array.from(n.toString()).reverse().join('')
+    let isPalindrome = n => reverNum(n) === n.toString()
+
+    let steps = 0
+    while (!isPalindrome(n)) {
+        steps++
+        n += parseInt(reverNum(n))
+    }
+    return steps
+};
