@@ -36,3 +36,18 @@ let palindromeChainLength = n => {
     }
     return steps
 };
+
+
+function duplicateCount(text){
+   let duplCnt = 0, counts = []
+
+    Array.from(text.toLowerCase()).map(x => counts[x] = (counts[x] || 0) + 1)
+
+    for (let c in counts) {
+        if (counts[c] > 1) {
+            duplCnt++
+        }
+    }
+
+    return duplCnt
+}
