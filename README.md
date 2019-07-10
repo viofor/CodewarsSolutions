@@ -63,3 +63,20 @@ var buy = function(x, arr){
   }
   return null;
 };
+
+
+function maxTriSum(numbers){
+let sum = 0;
+  let res = numbers.sort((a,b) => b - a);
+  let arr = [];
+  for(let i = 0; i < res.length; i++){
+      if(arr.length >= 3){
+      break
+  }
+  if(!arr.includes(res[i])){
+    arr.push(res[i]);
+    sum += res[i];
+    }
+  }
+ return sum;
+}
