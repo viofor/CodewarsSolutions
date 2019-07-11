@@ -91,3 +91,20 @@ function findMissing(arr1, arr2) {
    if(a1[i] !== a2[i]) return a1[i];
   }
 }
+
+
+function palindrome(num) { 
+ if(typeof num !== 'number' || num < 0) return "Not valid";
+ if(num < 10) return false;
+ num =  num.toString().split('').sort();
+ let count  = 0;
+ for(let i = 0; i < num.length -1; i){
+  if(num[i] === num[i + 1]){
+   count = count + 2;
+    i = i + 2;
+    } else i++;
+  }
+  if(num.length === count || num.length === count +1){
+  return true;
+  }else return false;
+}
