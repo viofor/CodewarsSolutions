@@ -80,3 +80,14 @@ let sum = 0;
   }
  return sum;
 }
+
+
+function findMissing(arr1, arr2) {
+  let misEl;
+  let a1 = arr1.sort((a,b) => a - b);
+  let a2 = arr2.sort((a,b) => a - b);
+  
+  for(let i = 0; i < a1.length; i++){
+   if(a1[i] !== a2[i]) return a1[i];
+  }
+}
