@@ -1,11 +1,12 @@
-function averageString(str) {
- let arr = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-  let arrStr = str.split(' ');
-  let sum = 0;
-  for(let i = 0; i < arrStr.length; i++){
-    sum += arr.indexOf(arrStr[i]);
-    if(arrStr[i] === '' || !arr.includes(arrStr[i])) return 'n/a';
+function mergeArrays(arr1, arr2) {
+  let newArr = [];
+   for(let i = 0; i < arr1.length; i++){
+    if(!newArr.includes(arr1[i]))
+    newArr.push(arr1[i]);
   }
-  let avg = Math.floor(sum/arrStr.length);
-    return arr[avg];
+    for(let i = 0; i < arr2.length; i++){
+    if(!newArr.includes(arr2[i]))
+     newArr.push(arr2[i]); 
+  }
+  return newArr.sort((a,b) => a-b);
 }
