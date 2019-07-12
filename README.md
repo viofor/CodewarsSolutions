@@ -1,12 +1,17 @@
-function mergeArrays(arr1, arr2) {
-  let newArr = [];
-   for(let i = 0; i < arr1.length; i++){
-    if(!newArr.includes(arr1[i]))
-    newArr.push(arr1[i]);
+function isPrime(n){
+  if(n === 2) return true;
+  if(n <= 1 || n % 2 === 0) return false;
+  for(let i = 3; i <= ~~Math.sqrt(n); i+=2){
+     if(n % i === 0) return false;
   }
-    for(let i = 0; i < arr2.length; i++){
-    if(!newArr.includes(arr2[i]))
-     newArr.push(arr2[i]); 
-  }
-  return newArr.sort((a,b) => a-b);
+  return true;
+};
+let primeProduct = function(n){
+   if(n <= 3) return 0;
+    for(let i  = ~~(n/2); i > 0; i--){
+      if(isPrime(n-i) && isPrime(i)){
+         return (n-i) * i;
+      }
+     }
+   return 0;
 }
