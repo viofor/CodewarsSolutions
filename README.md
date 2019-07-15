@@ -1,6 +1,6 @@
-function anagrams(word, words) {
-  function isAnagram(str){
-    return str.split("").sort().join("") === word.split("").sort().join("");
-  }
-  return words.filter(a => isAnagram(a));
+function partsSums(ls) {
+let arr = [0];
+ ls.reverse().forEach(v => arr.push(arr[arr.length-1] + v));
+   return arr.reverse();
+
 }
