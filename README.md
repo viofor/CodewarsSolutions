@@ -8,3 +8,8 @@ function tidyNumber(n){
     }
   return true;
 }
+
+//clever one:
+function tidyNumber(n){
+  return [...n+=""].sort().join``==n
+}
