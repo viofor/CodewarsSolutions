@@ -1,15 +1,16 @@
-function tidyNumber(n){
-   const arr = n.toString().split('')
-   for(let i = 0; i < arr.length -1; i++){
-    if(arr[i] <= arr[i + 1]){
-    continue
+function positiveSum(arr) {
+  var total = 0;    
+  for (i = 0; i < arr.length; i++) {    // setup loop to go through array of given length
+    if (arr[i] > 0) {                   // if arr[i] is greater than zero
+      total += arr[i];                  // add arr[i] to total
     }
-    else {return false}
-    }
-  return true;
+  }
+  return total;                         // return total
 }
 
-//clever one:
-function tidyNumber(n){
-  return [...n+=""].sort().join``==n
+
+//clever one;
+function positiveSum(arr) {
+ return arr.reduce((a,b) => {return (b > 0) ? (a + b) : (a + 0)}, 0);
+  
 }
