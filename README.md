@@ -1,16 +1,15 @@
-function positiveSum(arr) {
-  var total = 0;    
-  for (i = 0; i < arr.length; i++) {    // setup loop to go through array of given length
-    if (arr[i] > 0) {                   // if arr[i] is greater than zero
-      total += arr[i];                  // add arr[i] to total
-    }
+function playerManager(players) {
+  if(players === null || players.length === 0){
+    return [];
   }
-  return total;                         // return total
-}
-
-
-//clever one;
-function positiveSum(arr) {
- return arr.reduce((a,b) => {return (b > 0) ? (a + b) : (a + 0)}, 0);
-  
+    let arr = players.split(', ');
+    let res = [];
+    for(let i = 0; i < arr.length; i += 2){
+     let obj = {
+      player: arr[i],
+      contact: +arr[i+1]
+    };
+     res.push(obj);
+    }
+  return res;
 }
