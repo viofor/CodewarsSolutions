@@ -1,22 +1,16 @@
-function greet(language) {
-let obj = {
- english: 'Welcome',
-czech: 'Vitejte',
-danish: 'Velkomst',
-dutch: 'Welkom',
-estonian: 'Tere tulemast',
-finnish: 'Tervetuloa',
-flemish: 'Welgekomen',
-french: 'Bienvenue',
-german: 'Willkommen',
-irish: 'Failte',
-italian: 'Benvenuto',
-latvian: 'Gaidits',
-lithuanian: 'Laukiamas',
-polish: 'Witamy',
-spanish: 'Bienvenido',
-swedish: 'Valkommen',
-welsh: 'Croeso'
+function playerManager(players) {
+if(players === '' || players === null){
+  return [];
 }
-	return obj[language] === undefined ? "Welcome" : obj[language];
+  let arr = players.split(', ');
+  let arr2 = [];
+
+  for(let i = 0; i < arr.length; i+=2){
+    let obj = {
+      player: arr[i],
+      contact: +arr[i+1]
+    }
+  arr2.push(obj);
+  }
+  return arr2;
 }
