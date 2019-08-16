@@ -1,34 +1,13 @@
-   private int number;
-     private String stringValue;
-     private Object anObject;
- 
-     public int getNumber() {
-         return number;
-     }
- 
-     public void setNumber(int number) {
-         this.number = number;
-     }
- 
-     public String getStringValue() {
-         return stringValue;
-     }
- 
-     public void setStringValue(String stringValue) {
-         this.stringValue = stringValue;
-     }
- 
-     public Object getAnObject() {
-         return anObject;
-     }
- 
-     public EncapsulationDemo() {
-     }
- 
-     public EncapsulationDemo(int number, String stringValue, Object anObject) {
-         this.number = number;
-         this.stringValue = stringValue;
-         this.anObject = anObject;
-     }
- }
+public class Kata {
+  public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
+    while(true){
+       fighter1.health -= fighter2.damagePerAttack;
+       fighter2.health -= fighter1.damagePerAttack;
+       
+       if(fighter1.health <= 0 && fighter2.health <= 0) return firstAttacker;
+       if(fighter1.health <= 0) return fighter2.name; 
+       if(fighter2.health <= 0) return fighter1.name; 
+       }
+  }
+}
 
